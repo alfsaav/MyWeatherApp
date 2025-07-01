@@ -37,8 +37,9 @@ export class AppComponent {
   private trackPageView(url: string): void {
     if (typeof _sz !== 'undefined') {
       //This window instance is out out of sync w the one that adds ._sz after this loads 
-      _sz.push(["trackdynamic", { url, title: document.title, ref: document.referrer}]);
-      console.log('Page view tracked:', url, _sz);
+      //_sz.push(["trackdynamic", { url, title: document.title, ref: document.referrer}]);
+      _sz.push(["trackdynamic"]);
+      console.log('Page view tracked:', url);
     }
   }
 }
